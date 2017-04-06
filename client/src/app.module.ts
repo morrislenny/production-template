@@ -10,6 +10,8 @@ import { UserListComponent } from './app/users/user-list.component';
 import { UserListService } from './app/users/user-list.service';
 import { routing } from './app/app.routes';
 import { FormsModule } from '@angular/forms';
+import { GraphComponent} from './app/home/graph.component';
+import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 import { PipeModule } from './pipe.module';
 
@@ -20,14 +22,14 @@ import { PipeModule } from './pipe.module';
         JsonpModule,
         routing,
         FormsModule,
-        PipeModule
+        PipeModule,
     ],
     declarations: [
         AppComponent,
         KittensComponent,
         HomeComponent,
         NavbarComponent,
-        UserListComponent
+        UserListComponent,
     ],
     providers: [ UserListService ],
     bootstrap: [ AppComponent ]
