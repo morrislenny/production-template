@@ -10,8 +10,10 @@ import { UserListComponent } from './app/users/user-list.component';
 import { UserListService } from './app/users/user-list.service';
 import { routing } from './app/app.routes';
 import { FormsModule } from '@angular/forms';
+import { GraphComponent } from './app/home/graph.component';
 
 import { PipeModule } from './pipe.module';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 @NgModule({
     imports: [
@@ -20,14 +22,16 @@ import { PipeModule } from './pipe.module';
         JsonpModule,
         routing,
         FormsModule,
-        PipeModule
+        PipeModule,
+        Ng2GoogleChartsModule,
     ],
     declarations: [
         AppComponent,
         KittensComponent,
         HomeComponent,
         NavbarComponent,
-        UserListComponent
+        UserListComponent,
+        GraphComponent
     ],
     providers: [ UserListService ],
     bootstrap: [ AppComponent ]
